@@ -5,14 +5,15 @@ import { useEffect, useRef, useState } from 'react';
 interface StatItem {
   value: number;
   label: string;
+  prefix?: string;
   suffix?: string;
 }
 
 const STATS: StatItem[] = [
   { value: 3, label: 'Total Cours' },
-  { value: 496, label: 'Etudiants', suffix: '+' },
+  { value: 673, label: 'Entrepreneurs', prefix: '+' },
   { value: 4, label: 'Instructeurs' },
-  { value: 319, label: 'Business Accompagnés', suffix: '+' },
+  { value: 280, label: 'entreprises formées', prefix: '+' },
 ];
 
 function useCountUp(end: number, duration: number = 2000, isVisible: boolean) {
@@ -46,13 +47,13 @@ function useCountUp(end: number, duration: number = 2000, isVisible: boolean) {
   return count;
 }
 
-function StatCounter({ value, label, suffix = '', isVisible }: StatItem & { isVisible: boolean }) {
+function StatCounter({ value, label, prefix = '', suffix = '', isVisible }: StatItem & { isVisible: boolean }) {
   const count = useCountUp(value, 2000, isVisible);
 
   return (
     <div className="flex flex-col items-center text-center group">
       <p className="font-heading font-black text-2xl md:text-3xl text-primary-500 transition-transform duration-300 group-hover:scale-110">
-        {count.toLocaleString('fr-FR')}{suffix}
+        {prefix}{count.toLocaleString('fr-FR')}{suffix}
       </p>
       <p className="text-neutral-500 text-xs md:text-sm font-medium">{label}</p>
     </div>

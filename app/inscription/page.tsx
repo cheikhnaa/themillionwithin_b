@@ -7,7 +7,7 @@ import { InscriptionForm } from '@/components/sections/inscription/InscriptionFo
 export const metadata: Metadata = {
   title: 'Inscription',
   description:
-    'Inscrivez-vous à la formation The Million Within. Rejoignez 496+ femmes entrepreneures qui ont transformé leur vie.',
+    'Inscrivez-vous à la formation The Million Within. Rejoignez les +673 entrepreneurs qui ont transformé leur vie.',
 };
 
 function InscriptionFormFallback() {

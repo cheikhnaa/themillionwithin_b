@@ -115,7 +115,7 @@ export function Footer({ variant = 'default' }: FooterProps) {
             </Link>
 
             <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-xs">
-              {SITE.tagline}. Depuis 2014, nous accompagnons les femmes entrepreneures africaines.
+              {SITE.tagline}. Nous accompagnons les entrepreneurs partout dans le monde.
             </p>
 
             {/* Réseaux sociaux */}

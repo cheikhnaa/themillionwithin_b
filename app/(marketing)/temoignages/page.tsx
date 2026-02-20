@@ -66,7 +66,7 @@ export default function TemoignagesPage() {
       {/* ─── HERO COMPACT + STATS INTÉGRÉS ──────────────────────── */}
       <HeroMinimal
         label="Témoignages"
-        title="673 femmes ont osé,"
+        title="673 entrepreneurs ont osé,"
         titleHighlight="à votre tour."
         breadcrumbs={[{ label: 'Accueil', href: '/' }, { label: 'Témoignages' }]}
         size="sm"
@@ -74,12 +74,12 @@ export default function TemoignagesPage() {
         {/* Stats inline */}
         <div className="flex flex-wrap items-center gap-6 mt-4">
           <div className="flex items-center gap-2">
-            <span className="font-heading font-black text-2xl text-primary-500">673+</span>
-            <span className="text-sm text-neutral-600">formées</span>
+            <span className="font-heading font-black text-2xl text-primary-500">+673</span>
+            <span className="text-sm text-neutral-600">formés</span>
           </div>
           <div className="w-px h-6 bg-neutral-300 hidden sm:block" />
           <div className="flex items-center gap-2">
-            <span className="font-heading font-black text-2xl text-primary-500">10</span>
+            <span className="font-heading font-black text-2xl text-primary-500">+10</span>
             <span className="text-sm text-neutral-600">pays</span>
           </div>
           <div className="w-px h-6 bg-neutral-300 hidden sm:block" />
@@ -304,7 +304,7 @@ export default function TemoignagesPage() {
             Prête à écrire votre propre histoire ?
           </h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Rejoignez les 673+ femmes qui ont déjà transformé leur vie avec The Million Within Academy.
+            Rejoignez les +673 entrepreneurs qui ont déjà transformé leur vie avec The Million Within Academy.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button 

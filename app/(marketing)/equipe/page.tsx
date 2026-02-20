@@ -11,12 +11,12 @@ import { SITE } from '@/lib/constants';
 import teamData from '@/content/team.json';
 
 export const metadata: Metadata = {
-  title: "L'Équipe — Des femmes pour les femmes",
+  title: "L'Équipe — Des entrepreneurs pour les entrepreneurs",
   description:
-    "Découvrez l'équipe de The Million Within Academy. Des femmes entrepreneures passionnées qui accompagnent des centaines de femmes vers leur indépendance financière.",
+    "Découvrez l'équipe de The Million Within Academy. Des entrepreneurs passionnés qui accompagnent des centaines d'entrepreneurs vers leur indépendance financière.",
   openGraph: {
     title: "Notre Équipe | The Million Within Academy",
-    description: "Des femmes passionnées qui accompagnent votre transformation.",
+    description: "Des entrepreneurs passionnés qui accompagnent votre transformation.",
     url: `${SITE.url}/equipe`,
   },
 };
@@ -26,7 +26,7 @@ const VALUES = [
     icon: <Heart className="w-6 h-6" />,
     color: 'from-rose-400 to-primary-500',
     title: 'Bienveillance',
-    description: "Nous accompagnons chaque femme avec empathie, respect et soutien authentique, sans jugement.",
+    description: "Nous accompagnons chaque entrepreneur avec empathie, respect et soutien authentique, sans jugement.",
   },
   {
     icon: <Lightbulb className="w-6 h-6" />,
@@ -44,23 +44,7 @@ const VALUES = [
     icon: <Globe2 className="w-6 h-6" />,
     color: 'from-primary-400 to-terre-500',
     title: 'Accessibilité',
-    description: "Nous rendons l'entrepreneuriat accessible à toutes, peu importe le pays, le capital ou l'expérience.",
-  },
-];
-
-const HISTORY_MILESTONES = [
-  { year: '2014', title: 'Création de l\'academy', description: 'Mme Sall lance la première formation pour femmes entrepreneures africaines.' },
-  { year: '2018', title: '100 femmes formées', description: 'Le cap symbolique des 100 premières entrepreneuses accompagnées est atteint.' },
-  { year: '2021', title: 'Expansion internationale', description: 'La formation s\'étend à la diaspora africaine en Europe et en Amérique du Nord.' },
-  { year: '2024', title: '400+ étudiantes', description: 'Plus de 400 femmes ont lancé leur business grâce à la méthode Million Within.' },
-  {
-    year: '2026',
-    title: 'Aujourd\'hui',
-    description: [
-      'Plus de 500 000 000 FCFA de chiffre d\'affaires cumulé, généré par les entreprises créées.',
-      'Plus de 280 entreprises formées en Afrique, Europe et Amérique.',
-      'Plus de 673 entrepreneurs accompagnés.',
-    ],
+    description: "Nous rendons l'entrepreneuriat accessible à tous, peu importe le pays, le capital ou l'expérience.",
   },
 ];
 
@@ -70,9 +54,9 @@ export default function EquipePage() {
       {/* ─── HERO ──────────────────────────────────────────────── */}
       <HeroMinimal
         label="Notre équipe"
-        title="Des femmes qui croient"
+        title="Des entrepreneurs qui croient"
         titleHighlight="en votre potentiel."
-        subtitle="The Million Within Academy est née d'une conviction simple : toute femme porte en elle le potentiel de bâtir une entreprise prospère. Notre équipe est là pour l'aider à le révéler."
+        subtitle="The Million Within Academy est née d'une conviction simple : tout entrepreneur porte en lui le potentiel de bâtir une entreprise prospère. Notre équipe est là pour l'aider à le révéler."
         breadcrumbs={[{ label: 'Accueil', href: '/' }, { label: 'Notre équipe' }]}
         size="md"
       >
@@ -90,12 +74,12 @@ export default function EquipePage() {
               <div>
                 <Badge variant="brand" className="mb-4">Notre mission</Badge>
                 <h2 id="mission-title" className="text-2xl lg:text-3xl font-bold leading-snug text-neutral-900 mb-6">
-                  Aider les femmes à bâtir{' '}
+                  Aider les entrepreneurs à bâtir{' '}
                   <span className="text-primary-500">une entreprise prospère</span>{' '}
                   sans renoncer à leur famille.
                 </h2>
                 <p className="text-neutral-600 text-lg leading-relaxed mb-6">
-                  Nous croyons qu&apos;aucune femme ne devrait avoir à choisir entre sa famille et ses rêves.
+                  Nous croyons qu&apos;aucun entrepreneur ne devrait avoir à choisir entre sa famille et ses rêves.
                   Nous savons ce que c&apos;est que de traverser ce moment de doute, après la naissance
                   d&apos;un enfant, où l&apos;on se demande s&apos;il faut mettre de côté ses ambitions.
                 </p>
@@ -227,13 +211,13 @@ export default function EquipePage() {
 
       {/* ─── NOS VALEURS ───────────────────────────────────────── */}
       <ScrollReveal variant="fadeUp">
-        <section className="py-20 md:py-28 bg-white" aria-labelledby="values-title">
+        <section className="py-20 md:py-28 bg-neutral-900 text-white" aria-labelledby="values-title">
           <div className="container mx-auto px-5">
             <div className="text-center mb-14">
               <Badge variant="brand" className="mb-4">Nos valeurs</Badge>
-              <h2 id="values-title" className="text-2xl lg:text-3xl font-bold leading-snug text-neutral-900">
+              <h2 id="values-title" className="text-2xl lg:text-3xl font-bold leading-snug text-white">
                 Ce qui nous guide{' '}
-                <span className="text-primary-500">chaque jour</span>
+                <span className="text-primary-400">chaque jour</span>
               </h2>
             </div>
 
@@ -241,53 +225,15 @@ export default function EquipePage() {
               {VALUES.map((val, i) => (
                 <div
                   key={i}
-                  className="group p-8 rounded-3xl bg-neutral-50 border border-neutral-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center"
+                  className="group p-8 rounded-3xl bg-neutral-800/50 border border-neutral-700 hover:border-primary-500/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center"
                 >
                   <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${val.color} text-white flex items-center justify-center mx-auto mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     {val.icon}
                   </div>
-                  <h3 className="font-heading font-bold text-neutral-900 text-xl mb-3">{val.title}</h3>
-                  <p className="text-base font-normal leading-relaxed text-neutral-500 text-justify">{val.description}</p>
+                  <h3 className="font-heading font-bold text-white text-xl mb-3">{val.title}</h3>
+                  <p className="text-base font-normal leading-relaxed text-neutral-400 text-justify">{val.description}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-      </ScrollReveal>
-
-      {/* ─── NOTRE HISTOIRE ────────────────────────────────────── */}
-      <ScrollReveal variant="fadeUp">
-        <section className="py-20 md:py-28 bg-neutral-900 text-white" aria-labelledby="history-title">
-          <div className="container mx-auto px-5">
-            <div className="text-center mb-14">
-              <Badge variant="brand" className="mb-4">Notre histoire</Badge>
-              <h2 id="history-title" className="text-2xl lg:text-3xl font-bold leading-snug text-white">
-                10 ans de passion,{' '}
-                <span className="text-primary-400">d&apos;impact et de croissance</span>
-              </h2>
-            </div>
-
-            <div className="max-w-3xl mx-auto">
-              <ol className="relative border-l-2 border-primary-500/30" aria-label="Histoire de l'academy">
-                {HISTORY_MILESTONES.map((milestone, i) => (
-                  <li key={i} className="mb-8 ml-8 last:mb-0">
-                    <div className="absolute -left-3 w-6 h-6 rounded-full bg-primary-500 border-4 border-neutral-900 flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-white" aria-hidden />
-                    </div>
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
-                      <span className="text-primary-400 font-bold text-sm font-heading">{milestone.year}</span>
-                      <h3 className="font-heading font-bold text-white">{milestone.title}</h3>
-                    </div>
-                    {Array.isArray(milestone.description) ? (
-                      milestone.description.map((line, j) => (
-                        <p key={j} className="text-base font-normal leading-relaxed text-neutral-500 text-justify mb-2 last:mb-0">{line}</p>
-                      ))
-                    ) : (
-                      <p className="text-base font-normal leading-relaxed text-neutral-500 text-justify">{milestone.description}</p>
-                    )}
-                  </li>
-                ))}
-              </ol>
             </div>
           </div>
         </section>
