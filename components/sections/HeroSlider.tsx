@@ -15,7 +15,7 @@ const SLIDES = [
     title: 'PASSEZ DE L\'IDÉE',
     titleAccent: 'À LA CROISSANCE,',
     titleEnd: 'EN TOUTE CONFIANCE.',
-    subtitle: 'Rejoignez 673 entrepreneurs qui ont lancé leur business sans renoncer à leur famille. Sans capital de départ.',
+    subtitle: 'Plus de 500 000 000 FCFA de chiffre d\'affaires cumulé, généré par les entreprises.',
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const SLIDES = [
     title: '673 ENTREPRENEURS ONT OSÉ.',
     titleAccent: 'C\'EST VOTRE TOUR',
     titleEnd: 'DE RÉUSSIR.',
-    subtitle: 'Des femmes du Sénégal, France, Canada, Italie et partout dans la diaspora ont transformé leur vie. Vous êtes la suivante.',
+    subtitle: 'Des entrepreneurs du Sénégal, France, Canada, Italie et partout dans la diaspora ont transformé leur vie. Vous êtes la suivante.',
   },
 ] as const;
 
