@@ -237,8 +237,12 @@ export const TEAM_MEMBERS = [
 export type TeamMember = (typeof TEAM_MEMBERS)[number];
 
 
+const cloudinaryCloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || '';
 export const CLOUDINARY = {
-  cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || '',
+  cloudName: cloudinaryCloudName,
+  baseUrl: cloudinaryCloudName
+    ? `https://res.cloudinary.com/${cloudinaryCloudName}`
+    : '',
   apiKey: process.env.CLOUDINARY_API_KEY || '',
   apiSecret: process.env.CLOUDINARY_API_SECRET || '',
 };
