@@ -94,7 +94,16 @@ const TRUST_LOGOS = [
 
 /* ─── PAGE ────────────────────────────────────────────────────── */
 
+function getDaysRemaining(targetDate: Date): number {
+  const now = new Date();
+  const target = new Date(targetDate);
+  const diffMs = target.getTime() - now.getTime();
+  return Math.max(0, Math.floor(diffMs / (24 * 60 * 60 * 1000)));
+}
+
 export default function HomePage() {
+  const daysRemaining = getDaysRemaining(NEXT_SESSION.date);
+
   return (
     <>
       <CourseJsonLd />
@@ -279,7 +288,7 @@ export default function HomePage() {
                 className="text-3xl lg:text-4xl font-bold leading-snug text-white mb-4"
               >
                 Votre business commence{' '}
-                <span className="text-primary-400">dans 53 jours.</span>
+                <span className="text-primary-400">dans {daysRemaining} jours.</span>
               </h2>
 
               <p className="text-base font-normal leading-relaxed text-white/60 mb-6 max-w-xl mx-auto">
